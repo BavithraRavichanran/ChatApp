@@ -11,8 +11,8 @@ import './App.css'
 
 // const { Search } = Input;
 // const {Text}= Typography;
-// const client = new W3CWebsocket('ws://127.0.0.1:8000');
-const client = new W3CWebsocket('/');
+const client = new W3CWebsocket('ws://127.0.0.1:8000');
+// const client = new W3CWebsocket('/');
 
 
 export default class App extends Component {
