@@ -1,6 +1,13 @@
-const websocketServerPort = 8000;
+const express = require('express');
+const app = express()
+
+
+
+
+const websocketServerPort = process.env.PORT || 8000;
 const websocketServer = require('websocket').server;
-const http = require('http');
+const http = require('http')
+app.use(express.static(__dirname + '../../build'))
 
 // Spinning the http server and the websocket server
 const server = http.createServer();
