@@ -27,7 +27,7 @@ export default class App extends Component {
       msg: value,
       user: this.state.userName
     }));
-    this.setState({searchVal: ''})
+    this.setState({ searchVal: '' })
   }
   componentDidMount() {
     client.onopen = () => {
@@ -75,13 +75,14 @@ export default class App extends Component {
 
             <div className="bottom">
               <Search
-                placeholder="input essage and send"
+                placeholder="input message and send"
                 enterButton="Send"
                 value={this.state.searchVal}
                 size="large"
                 onChange={(e) => this.setState({ searchVal: e.target.value })}
                 onSearch={value => this.onButtonClicked(value)}
-              />            </div>
+              />
+            </div>
             {/* <button onClick={() => this.onButtonClicked('Hello')}>Send Msg</button>
         {this.state.messages.map(msg => <p>message: {msg.msg}, user: {msg.user}</p>)} */}
           </div>
