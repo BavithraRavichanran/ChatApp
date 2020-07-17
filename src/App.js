@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { w3cwebsocket as W3CWebsocket } from 'websocket';
-import { Card, Avatar, Input, Typography } from 'antd';
+import { Card, Avatar, } from 'antd';
 import 'antd/dist/antd.css';
 import Search from 'antd/lib/input/Search';
 import Text from 'antd/lib/typography/Text';
