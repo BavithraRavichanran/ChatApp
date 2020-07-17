@@ -1,13 +1,16 @@
 const express = require('express');
 const app = express()
-
+var path=require('path');
 
 
 
 const websocketServerPort = process.env.PORT || 8000;
+// app.set('port', websocketServerPort);
 const websocketServer = require('websocket').server;
 const http = require('http')
-app.use(express.static(__dirname + '../../build'))
+// app.use(express.static(__dirname + '../../build'))
+app.use(express.static(path.join(__dirname, '../../public')));
+app.use(express.static(path.resolve(__dirname, '../../build')));
 
 // Spinning the http server and the websocket server
 const server = http.createServer();

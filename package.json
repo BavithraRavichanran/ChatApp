@@ -9,6 +9,7 @@
     "antd": "^4.4.2",
     "express": "^4.17.1",
     "http": "0.0.1-security",
+    "path": "^0.12.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -16,7 +17,9 @@
   },
   "scripts": {
     "dev": "concurrently --kill-others \"npm run react\" \"npm run server\"",
+    "heroku-postbuild": " npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "start": "node src/server/index.js",
+    "client": "npm start",
     "react": "react-scripts start",
     "server": "node src/server/index.js",
     "build": "react-scripts build",
